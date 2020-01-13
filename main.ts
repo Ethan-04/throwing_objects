@@ -84,7 +84,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(hero)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite, otherSprite) {
-	
+    Rain.destroy(effects.clouds, 500)
 })
 function raindrop () {
     Rain = sprites.createProjectileFromSprite(img`
@@ -113,9 +113,10 @@ let projectile: Sprite = null
 let cloud: Sprite = null
 let ball: Sprite = null
 let hero: Sprite = null
-hero()
-cloud()
+hero2()
+cloud2()
 raindrop()
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(200, function () {
     raindrop()
+    cloud2()
 })
