@@ -116,7 +116,7 @@ let hero: Sprite = null
 hero2()
 cloud2()
 raindrop()
-game.onUpdateInterval(200, function () {
+game.onUpdateInterval(700, function () {
     raindrop()
     cloud2()
 })
